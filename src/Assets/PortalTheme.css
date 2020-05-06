@@ -1,0 +1,118 @@
+.card-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 10px 10px 45px;
+  margin: 80px 20px 0 0;
+  border-radius: 5px;
+}
+
+#box-1 {
+  float: left;
+  width: 35%;
+}
+
+#box-2 {
+  float: left;
+  width: 35%;
+}
+
+.check-heading {
+  margin: 20px 0;
+}
+
+.customcheck {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #403d3d;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.customcheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #827f7f;
+}
+
+.customcheck input:checked ~ .checkmark {
+  background-color: #803eca;
+  border-radius: 3px;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.customcheck input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.customcheck .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 7px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.data-list {
+  width: 90%;
+  background: #e4e4e4;
+  padding: 8px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.data-list .text {
+  font-size: 15px;
+  color: #6d6a69;
+}
+
+.data-list .cross {
+  float: right;
+  font-size: 19px;
+  text-align: center;
+  font-weight: bolder;
+  color: #6d6a69;
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.no-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #6d6a69;
+}

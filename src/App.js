@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import loadable from 'loadable-components';
+import "./Assets/PortalTheme.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Loading = () => <div>Loading...</div>;
+
+const DefaultLayout = loadable(() => import('./Containers'), {
+  LoadingComponent: Loading,
+});
+
+class App extends Component {
+  render() {
+    return (
+      <main style={{ marginTop: '56px' }}>
+        <HashRouter>
+          <Switch>
+            <Route path="/" component={DefaultLayout} />
+          </Switch>
+        </HashRouter>
+      </main>
+    );
+  }
 }
 
 export default App;
