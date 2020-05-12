@@ -1,11 +1,11 @@
 import React from 'react';
-import './DrawerToggleButton.css';
+import DrawerToggleClass from './DrawerToggle.module.css';
 
 const drawerToggleButton = (props) => (
-  <button className="toggle-button" onClick={props.click}>
-    <div className="toggle-button__line" />
-    <div className="toggle-button__line" />
-    <div className="toggle-button__line" />
+  <button className={DrawerToggleClass.toggleButton} onClick={props.click}>
+    <div className={DrawerToggleClass.toggleButtonLine} />
+    <div className={DrawerToggleClass.toggleButtonLine} />
+    <div className={DrawerToggleClass.toggleButtonLine} />
   </button>
 );
 

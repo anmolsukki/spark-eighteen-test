@@ -1,41 +1,38 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Routes from '../Router/routes';
 import Navbar from './Toolbars/Toolbar';
 import SideDrawer from './SideDrawer/SideDrawer';
 import Backdrop from './BackDrop/BackDrop';
-import routes from '../Router/routes';
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      sideDrawerOpen: false,
-      navData: [
-        {
-          title: 'Home',
-          isSelected: this.props.location.pathname === '/home' ? true : false,
-          link: '/home'
-        },
-        {
-          title: 'My Portfolio',
-          isSelected: this.props.location.pathname === '/portfolio' ? true : false,
-          link: '/portfolio'
-        },
-        {
-          title: 'Clients',
-          isSelected: this.props.location.pathname === '/clients' ? true : false,
-          link: '/clients'
-        },
-        {
-          title: 'Get in touch',
-          isSelected: this.props.location.pathname === '/touch' ? true : false,
-          link: '/touch'
-        }
-      ],
-    };
-  }
+  state = {
+    sideDrawerOpen: false,
+    navData: [
+      {
+        title: 'Home',
+        isSelected: this.props.location.pathname === '/home' ? true : false,
+        link: '/home',
+      },
+      {
+        title: 'My Portfolio',
+        isSelected: this.props.location.pathname === '/portfolio' ? true : false,
+        link: '/portfolio',
+      },
+      {
+        title: 'Client',
+        isSelected: this.props.location.pathname === '/client' ? true : false,
+        link: '/client',
+      },
+      {
+        title: 'Get In Touch',
+        isSelected: this.props.location.pathname === '/touch' ? true : false,
+        link: '/touch',
+      },
+    ],
+  };
 
-  loading = () => <div>Loading...</div>;
+  loading = () => (<div>Loading...</div>);
 
   drawerToggleClickHandler = async () => {
     await this.setState((prevState) => {
@@ -77,7 +74,7 @@ class Main extends React.Component {
         <main>
           <Suspense fallback={this.loading()}>
             <Switch>
-              {routes.map((route, idx) => {
+              {Routes.map((route, idx) => {
                 return route.component ? (
                   <Route
                     key={idx}

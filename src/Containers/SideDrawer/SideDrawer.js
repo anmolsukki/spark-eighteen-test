@@ -1,11 +1,11 @@
 import React from 'react';
-import './SideDrawer.css';
 import { Link } from 'react-router-dom';
+import SideDrawerClass from './SideDrawer.module.css';
 
 const sideDrawer = (props) => {
-  let drawerClasses = ['side-drawer'];
+  let drawerClasses = [SideDrawerClass.sideDrawer];
   if (props.show) {
-    drawerClasses = 'side-drawer open';
+    drawerClasses = `${SideDrawerClass.sideDrawer} ${SideDrawerClass.open}`;
   }
 
   return (
@@ -16,9 +16,10 @@ const sideDrawer = (props) => {
             <li key={item.link}>
               <Link
                 to={item.link}
-                className={`nav-option ${item.isSelected === true ? 'active' : ''}`}
+                className={`${SideDrawerClass.navOption} ${
+                  item.isSelected === true ? SideDrawerClass.active : ''
+                }`}
                 onClick={() => props.bacDrawer() && props.addClass(item)}>
-                <i className={item.icon} style={{ margin: '7px' }}></i>
                 {item.title}
               </Link>
             </li>

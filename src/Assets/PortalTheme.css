@@ -22,10 +22,6 @@
   width: 35%;
 }
 
-.check-heading {
-  margin: 20px 0;
-}
-
 .customcheck {
   display: block;
   position: relative;
@@ -88,9 +84,9 @@
 .data-list {
   width: 90%;
   background: #e4e4e4;
-  padding: 8px;
+  padding: 5px;
   border-radius: 3px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .data-list .text {
