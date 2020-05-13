@@ -66,6 +66,9 @@ class Home extends Component {
                                     </React.Fragment>
                                 )
                             }
+                            else {
+                                return null
+                            }
                         })}
                     </main>
                 )
