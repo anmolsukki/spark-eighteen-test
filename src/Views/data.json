@@ -1,0 +1,58 @@
+{
+  "Portugal": [
+    {
+      "id": 1,
+      "isChecked": false,
+      "name": "Aasiya Jayavant"
+    },
+    {
+      "id": 2,
+      "isChecked": false,
+      "name": "Luvleen Lawrence"
+    },
+    {
+      "id": 3,
+      "isChecked": false,
+      "name": "Rey Mibourne"
+    },
+    {
+      "id": 4,
+      "isChecked": false,
+      "name": "Cayla Brister"
+    }
+  ],
+  "Nicaragua": [
+    {
+      "id": 5,
+      "isChecked": false,
+      "name": "Daveedaas Nandi"
+    },
+    {
+      "id": 6,
+      "isChecked": false,
+      "name": "Obasey Chidy"
+    },
+    {
+      "id": 7,
+      "isChecked": false,
+      "name": "Xenie Dolezelova"
+    },
+    {
+      "id": 8,
+      "isChecked": false,
+      "name": "Ezequlel Dengra"
+    }
+  ],
+  "Marshall Islands": [
+    {
+      "id": 9,
+      "isChecked": false,
+      "name": "Aaron Almaraz"
+    },
+    {
+      "id": 10,
+      "isChecked": false,
+      "name": "Jelena Denesova"
+    }
+  ]
+}
