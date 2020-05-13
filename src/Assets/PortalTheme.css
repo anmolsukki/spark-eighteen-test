@@ -112,3 +112,21 @@
   width: 100%;
   color: #6d6a69;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .card-center {
+    display: grid;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  #box-1 {
+    float: left;
+    width: 100%;
+  }
+
+  #box-2 {
+    float: left;
+    width: 100%;
+  }
+}
